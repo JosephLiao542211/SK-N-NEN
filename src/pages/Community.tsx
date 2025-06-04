@@ -142,7 +142,7 @@ const Community = () => {
                                 <CardHeader>
                                     <CardTitle className="text-xl font-serif text-gradient flex items-center">
                                         <MessageCircle className="mr-2 h-6 w-6" />
-                                        Community Message Board
+                                    Community Message Board
                                     </CardTitle>
                                     <p className="text-gray-600 text-body italic">
                                         Share your thoughts, questions, or
