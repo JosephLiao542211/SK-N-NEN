@@ -132,7 +132,7 @@ const Index = () => {
                                 size="lg"
                                 className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
                                 onClick={() =>
-                                    (window.location.href = '/resources')
+                                    (window.location.href = `${process.env.FRONTEND_URL}/resources`)
                                 }
                             >
                                 Explore Our Resources
@@ -161,7 +161,7 @@ const Index = () => {
                                 size="lg"
                                 className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
                                 onClick={() =>
-                                    (window.location.href = '/community')
+                                    (window.location.href = `${process.env.FRONTEND_URL}/community`)
                                 }
                             >
                                 Connect With Us

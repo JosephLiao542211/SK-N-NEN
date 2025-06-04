@@ -8,7 +8,15 @@ import {
     AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+import {
+    ExternalLink,
+    Phone,
+    Mail,
+    MapPin,
+    CalendarCheck,
+    Check,
+    ClipboardCheck,
+} from 'lucide-react';
 
 const Resources = () => {
     const faqs = [
@@ -162,67 +170,99 @@ const Resources = () => {
 
                     {/* Self-Advocacy Tips */}
                     <section className="mb-16">
-                        <Card className="bg-white/60 backdrop-blur-sm border-border/50">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-serif text-gradient text-center">
+                        <Card className="bg-white/90 backdrop-blur-sm border-border/50 shadow-md hover:shadow-lg transition-all duration-300">
+                            <CardHeader className="pb-2">
+                                <CardTitle className="text-2xl font-serif text-gradient text-center">
                                     Self-Advocacy Checklist
                                 </CardTitle>
+                                <p className="text-center text-black/60 text-medium mt-2">
+                                    Prepare for your healthcare journey with
+                                    confidence
+                                </p>
                             </CardHeader>
-                            <CardContent>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <h3 className="font-serif font-semibold text-black text-lg mb-4">
-                                            Before Appointments:
+                            <CardContent className="pt-8">
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div className="bg-primary/5 rounded-xl p-6">
+                                        <h3 className="font-serif font-semibold text-black/80 text-xl mb-6 flex items-center">
+                                            <CalendarCheck className="h-5 w-5 mr-2 text-primary/70" />
+                                            Before Appointments
                                         </h3>
-                                        <ul className="space-y-2 text-black text-body">
-                                            <li>
-                                                • Write down your questions and
-                                                concerns
-                                            </li>
-                                            <li>
-                                                • Bring a support person{' '}
-                                                <span className="italic">
-                                                    if desired
+                                        <ul className="space-y-4 text-black/70 text-body">
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-primary/70" />
+                                                <span>
+                                                    Write down your questions
+                                                    and concerns
                                                 </span>
                                             </li>
-                                            <li>
-                                                • Research your healthcare
-                                                provider
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-primary/70" />
+                                                <span>
+                                                    Bring a support person if
+                                                    desired
+                                                </span>
                                             </li>
-                                            <li>
-                                                • Prepare your medical history
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-primary/70" />
+                                                <span>
+                                                    Research your healthcare
+                                                    provider
+                                                </span>
                                             </li>
-                                            <li>
-                                                • Know your rights and options
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-primary/70" />
+                                                <span>
+                                                    Prepare your medical history
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-primary/70" />
+                                                <span>
+                                                    Know your rights and options
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <h3 className="font-serif font-semibold text-black text-lg mb-4">
-                                            During Appointments:
+                                    <div className="bg-secondary/5 rounded-xl p-6">
+                                        <h3 className="font-serif font-semibold text-black/80 text-xl mb-6 flex items-center">
+                                            <ClipboardCheck className="h-5 w-5 mr-2 text-secondary/70" />
+                                            During Appointments
                                         </h3>
-                                        <ul className="space-y-2 text-black text-body">
-                                            <li>
-                                                • Ask questions if you don't
-                                                understand
-                                            </li>
-                                            <li>
-                                                • Request time to consider
-                                                options
-                                            </li>
-                                            <li>
-                                                • Discuss cultural preferences
-                                            </li>
-                                            <li>
-                                                • Take notes{' '}
-                                                <span className="italic">
-                                                    or ask for written
-                                                    information
+                                        <ul className="space-y-4 text-black/70 text-body">
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-secondary/70" />
+                                                <span>
+                                                    Ask questions if you don't
+                                                    understand
                                                 </span>
                                             </li>
-                                            <li>
-                                                • Trust your instincts and speak
-                                                up
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-secondary/70" />
+                                                <span>
+                                                    Request time to consider
+                                                    options
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-secondary/70" />
+                                                <span>
+                                                    Discuss cultural preferences
+                                                    and practices
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-secondary/70" />
+                                                <span>
+                                                    Take notes or ask for
+                                                    written information
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <Check className="h-5 w-5 mr-2 mt-0.5 text-secondary/70" />
+                                                <span>
+                                                    Trust your instincts and
+                                                    speak up
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
@@ -233,39 +273,57 @@ const Resources = () => {
 
                     {/* Emergency Information */}
                     <section>
-                        <Card className="bg-primary/10 border-primary/20">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-serif text-gradient text-center">
+                        <Card className="bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 border-primary/20 shadow-md">
+                            <CardHeader className="pb-2">
+                                <CardTitle className="text-2xl font-serif text-gradient text-center">
                                     Emergency & Crisis Support
                                 </CardTitle>
+                                <p className="text-center text-black/60 text-medium mt-2">
+                                    24/7 Support when you need it most
+                                </p>
                             </CardHeader>
-                            <CardContent>
-                                <div className="grid md:grid-cols-3 gap-6 text-center">
-                                    <div>
-                                        <Phone className="h-8 w-8 mx-auto mb-2 text-primary" />
-                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
+                            <CardContent className="pt-8">
+                                <div className="grid md:grid-cols-3 gap-8">
+                                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-md transition-all duration-300">
+                                        <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                                            <Phone className="h-6 w-6 text-primary/80" />
+                                        </div>
+                                        <h3 className="font-serif font-semibold text-black/80 text-lg mb-3">
                                             24/7 Crisis Line
                                         </h3>
-                                        <p className="text-black text-body">
+                                        <p className="text-black/70 text-body font-medium">
                                             1-888-472-4367
                                         </p>
-                                    </div>
-                                    <div>
-                                        <Mail className="h-8 w-8 mx-auto mb-2 text-primary" />
-                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
-                                            Patient Advocate
-                                        </h3>
-                                        <p className="text-black text-body italic">
-                                            advocate@bqfn.ca
+                                        <p className="text-black/60 text-small mt-2">
+                                            Available anytime, day or night
                                         </p>
                                     </div>
-                                    <div>
-                                        <MapPin className="h-8 w-8 mx-auto mb-2 text-primary" />
-                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
+                                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-md transition-all duration-300">
+                                        <div className="w-12 h-12 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                                            <Mail className="h-6 w-6 text-accent/80" />
+                                        </div>
+                                        <h3 className="font-serif font-semibold text-black/80 text-lg mb-3">
+                                            Patient Advocate
+                                        </h3>
+                                        <p className="text-black/70 text-body font-medium">
+                                            advocate@bqfn.ca
+                                        </p>
+                                        <p className="text-black/60 text-small mt-2">
+                                            We'll respond within 24 hours
+                                        </p>
+                                    </div>
+                                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-md transition-all duration-300">
+                                        <div className="w-12 h-12 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
+                                            <MapPin className="h-6 w-6 text-secondary/80" />
+                                        </div>
+                                        <h3 className="font-serif font-semibold text-black/80 text-lg mb-3">
                                             Health Centre
                                         </h3>
-                                        <p className="text-black text-body">
+                                        <p className="text-black/70 text-body font-medium">
                                             Bay of Quinte First Nations
+                                        </p>
+                                        <p className="text-black/60 text-small mt-2">
+                                            Open Mon-Fri, 8am-5pm
                                         </p>
                                     </div>
                                 </div>
