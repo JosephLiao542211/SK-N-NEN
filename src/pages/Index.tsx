@@ -3,8 +3,11 @@ import Navigation from '../components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Users, BookOpen, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#fff5eb] via-[#fdf1f5] to-[#f0f7ff]">
             <Navigation />
@@ -137,9 +140,7 @@ const Index = () => {
                                 variant="outline"
                                 size="lg"
                                 className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
-                                onClick={() =>
-                                    (window.location.href = '/resources')
-                                }
+                                onClick={() => navigate('/Resources')}
                             >
                                 Explore Our Resources
                             </Button>
@@ -166,9 +167,7 @@ const Index = () => {
                                 variant="outline"
                                 size="lg"
                                 className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
-                                onClick={() =>
-                                    (window.location.href = '/community')
-                                }
+                                onClick={() => navigate('/Community')}
                             >
                                 Connect With Us
                             </Button>
