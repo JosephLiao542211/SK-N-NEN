@@ -153,48 +153,51 @@ const Index = () => {
             <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col items-center mb-12">
-                        <h2 className="heading-md text-center text-gradient mb-4">
-                            Kenhtè:ke Midwives Services
-                        </h2>
-                        <a
-                            href="https://www.kenhtekemidwives.com/services"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-full transition-all duration-300 group"
-                        >
-                            Visit Official Services Page
-                            <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </a>
+                        <div className="relative w-full max-w-4xl mb-8"></div>
+                        <div className="text-center max-w-2xl">
+                            <h2 className="heading-md text-center text-gradient mb-4">
+                                Kenhtè:ke Midwives Services
+                            </h2>
+                            <a
+                                href="https://www.kenhtekemidwives.com/services"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 text-primary font-medium rounded-full transition-all duration-300 group"
+                            >
+                                Visit Official Services Page
+                                <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                            </a>
+                        </div>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
+                        <Card className="bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-serif font-semibold text-primary/80 mb-4 pb-2 border-b border-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                                <h3 className="text-xl font-serif font-semibold text-primary/90 mb-4 pb-2 border-b border-primary/10 group-hover:text-primary transition-colors">
                                     Prenatal Care
                                 </h3>
-                                <ul className="space-y-2 text-black/70">
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-primary/90 transition-colors">
                                             Regular check-ups throughout
                                             pregnancy
                                         </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-primary/90 transition-colors">
                                             Traditional medicine and teachings
                                         </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-primary/90 transition-colors">
                                             Cultural and spiritual support
                                         </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-primary/90 transition-colors">
                                             Home or clinic visits available
                                         </span>
                                     </li>
@@ -202,57 +205,67 @@ const Index = () => {
                             </CardContent>
                         </Card>
 
-                        <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
+                        <Card className="bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-secondary/10 hover:border-secondary/20 transition-all duration-300 group">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-serif font-semibold text-primary/80 mb-4 pb-2 border-b border-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                                <h3 className="text-xl font-serif font-semibold text-secondary/90 mb-4 pb-2 border-b border-secondary/10 group-hover:text-secondary transition-colors">
                                     Birth Support
                                 </h3>
-                                <ul className="space-y-2 text-black/70">
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>24/7 on-call support</span>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-secondary/90 transition-colors">
+                                            24/7 on-call support
+                                        </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-secondary/90 transition-colors">
                                             Home or hospital birth options
                                         </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-secondary/90 transition-colors">
                                             Traditional birth ceremonies
                                         </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>Culturally safe care</span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-secondary/90 transition-colors">
+                                            Culturally safe care
+                                        </span>
                                     </li>
                                 </ul>
                             </CardContent>
                         </Card>
 
-                        <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
+                        <Card className="bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-accent/10 hover:border-accent/20 transition-all duration-300 group">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-serif font-semibold text-primary/80 mb-4 pb-2 border-b border-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                                <h3 className="text-xl font-serif font-semibold text-accent/90 mb-4 pb-2 border-b border-accent/10 group-hover:text-accent transition-colors">
                                     Postpartum Care
                                 </h3>
-                                <ul className="space-y-2 text-black/70">
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>Regular home visits</span>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-accent/40 to-accent/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-accent/90 transition-colors">
+                                            Regular home visits
+                                        </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>Breastfeeding support</span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-accent/40 to-accent/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-accent/90 transition-colors">
+                                            Breastfeeding support
+                                        </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>Newborn care guidance</span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-accent/40 to-accent/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-accent/90 transition-colors">
+                                            Newborn care guidance
+                                        </span>
                                     </li>
-                                    <li className="flex items-start space-x-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
-                                        <span>
+                                    <li className="flex items-start space-x-3 text-black/70 group">
+                                        <span className="w-2 h-2 mt-1.5 rounded-full bg-gradient-to-r from-accent/40 to-accent/60 group-hover:scale-125 transition-transform"></span>
+                                        <span className="group-hover:text-accent/90 transition-colors">
                                             Traditional healing practices
                                         </span>
                                     </li>

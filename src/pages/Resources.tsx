@@ -76,7 +76,7 @@ const Resources = () => {
             <Navigation />
 
             <div className="container mx-auto px-4 py-16">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-16">
                         <h1 className="heading-lg text-gradient pb-6">
@@ -119,228 +119,150 @@ const Resources = () => {
                     {/* Kenhtè:ke Midwives Services Section */}
                     <section className="mb-16">
                         <div className="flex flex-col items-center mb-8">
-                            <h2 className="heading-md text-gradient mb-4">
-                                Kenhtè:ke Midwives Services
-                            </h2>
-                            <a
-                                href="https://www.kenhtekemidwives.com/services"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-full transition-all duration-300 group"
-                            >
-                                Visit Official Services Page
-                                <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                            </a>
+                            <div className="relative w-full max-w-4xl mb-8"></div>
+                            <div className="text-center max-w-2xl">
+                                <h2 className="heading-md text-gradient mb-4">
+                                    Kenhtè:ke Midwives Services
+                                </h2>
+                                <a
+                                    href="https://www.kenhtekemidwives.com/services"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 text-primary font-medium rounded-full transition-all duration-300 group"
+                                >
+                                    Visit Official Services Page
+                                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                </a>
+                            </div>
                         </div>
-                        <Card className="bg-white/40 backdrop-blur-sm border-primary/10 shadow-sm hover:shadow-md transition-all duration-300">
-                            <CardContent className="pt-6">
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="space-y-3 p-4 bg-white/60 rounded-lg">
-                                        <h3 className="font-serif font-semibold text-primary/80 text-lg mb-3 border-b border-primary/20 pb-2">
-                                            Prenatal Care Schedule
-                                        </h3>
-                                        <ul className="space-y-2 text-black/70 text-sm">
-                                            <li className="flex items-center space-x-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                                                <span>
-                                                    Every 4 weeks until 28 weeks
-                                                </span>
-                                            </li>
-                                            <li className="flex items-center space-x-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                                                <span>
-                                                    Every 2 weeks from 28 – 36
-                                                    weeks
-                                                </span>
-                                            </li>
-                                            <li className="flex items-center space-x-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                                                <span>
-                                                    Every week after 36 weeks
-                                                </span>
-                                            </li>
-                                        </ul>
-                                        <p className="text-black/60 italic mt-3 text-xs">
-                                            Visits last approximately 1 hour and
-                                            can be done at the clinic or your
-                                            home
-                                        </p>
-                                    </div>
-                                    <div className="space-y-3 p-4 bg-white/60 rounded-lg">
-                                        <h3 className="font-serif font-semibold text-primary/80 text-lg mb-3 border-b border-primary/20 pb-2">
-                                            Postpartum Care Schedule
-                                        </h3>
-                                        <ul className="space-y-2 text-black/70 text-sm">
-                                            <li className="flex items-center space-x-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                                                <span>
-                                                    1, 3, 5 & 10 Day home visits
-                                                </span>
-                                            </li>
-                                            <li className="flex items-center space-x-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                                                <span>
-                                                    3 & 6 Week clinic visits
-                                                </span>
-                                            </li>
-                                            <li className="flex items-center space-x-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                                                <span>
-                                                    24/7 on-call support
-                                                    available
-                                                </span>
-                                            </li>
-                                        </ul>
-                                        <p className="text-black/60 italic mt-3 text-xs">
-                                            Postpartum visits are approximately
-                                            1½ hours long
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="mt-6 pt-6 border-t border-primary/10">
-                                    <h3 className="font-serif font-semibold text-primary/80 text-lg mb-4 text-center">
-                                        Additional Services
-                                    </h3>
-                                    <div className="grid md:grid-cols-3 gap-4 text-sm">
-                                        <div className="p-3 bg-white/40 rounded-lg">
-                                            <ul className="space-y-1.5">
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Complete Prenatal Care
+
+                        <div className="flex flex-col md:flex-row justify-between md:space-x-5 mx-auto">
+                            <img
+                                className="h-auto img-feature object-cover w-full md:w-1/3 rounded-2xl mb-5 md:mb-0"
+                                src="/midwife.jpg"
+                                alt="Kenhtè:ke Midwives team"
+                            />
+
+                            <Card className="bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-primary/10 shadow-lg hover:shadow-xl transition-all duration-300">
+                                <CardContent className="pt-8">
+                                    <div className="grid md:grid-cols-2 gap-8">
+                                        <div className="space-y-4 p-6 bg-white/60 rounded-2xl border border-primary/5">
+                                            <h3 className="font-serif font-semibold text-primary/90 text-lg mb-4 pb-2 border-b border-primary/10">
+                                                Prenatal Care Schedule
+                                            </h3>
+                                            <ul className="space-y-3">
+                                                <li className="flex items-center space-x-3 text-black/70 group">
+                                                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                                    <span className="group-hover:text-primary/90 transition-colors">
+                                                        Every 4 weeks until 28
+                                                        weeks
                                                     </span>
                                                 </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Labour & Birth Care
+                                                <li className="flex items-center space-x-3 text-black/70 group">
+                                                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                                    <span className="group-hover:text-primary/90 transition-colors">
+                                                        Every 2 weeks from 28 –
+                                                        36 weeks
                                                     </span>
                                                 </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>Postpartum Care</span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>Pap Tests</span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Pregnancy Testing
+                                                <li className="flex items-center space-x-3 text-black/70 group">
+                                                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary/40 to-primary/60 group-hover:scale-125 transition-transform"></span>
+                                                    <span className="group-hover:text-primary/90 transition-colors">
+                                                        Every week after 36
+                                                        weeks
                                                     </span>
                                                 </li>
                                             </ul>
+                                            <p className="text-black/50 italic mt-4 text-sm border-t border-primary/5 pt-4">
+                                                Visits last approximately 1 hour
+                                                and can be done at the clinic or
+                                                your home
+                                            </p>
                                         </div>
-                                        <div className="p-3 bg-white/40 rounded-lg">
-                                            <ul className="space-y-1.5">
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Traditional Medicine
+                                        <div className="space-y-4 p-6 bg-white/60 rounded-2xl border border-secondary/5">
+                                            <h3 className="font-serif font-semibold text-secondary/90 text-lg mb-4 pb-2 border-b border-secondary/10">
+                                                Postpartum Care Schedule
+                                            </h3>
+                                            <ul className="space-y-3">
+                                                <li className="flex items-center space-x-3 text-black/70 group">
+                                                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                                    <span className="group-hover:text-secondary/90 transition-colors">
+                                                        1, 3, 5 & 10 Day home
+                                                        visits
                                                     </span>
                                                 </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Traditional Parenting
+                                                <li className="flex items-center space-x-3 text-black/70 group">
+                                                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                                    <span className="group-hover:text-secondary/90 transition-colors">
+                                                        3 & 6 Week clinic visits
                                                     </span>
                                                 </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Family Teachings
-                                                    </span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Nutrition Support
-                                                    </span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>Well Baby Care</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div className="p-3 bg-white/40 rounded-lg">
-                                            <ul className="space-y-1.5">
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Breastfeeding Support
-                                                    </span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Puberty Teachings
-                                                    </span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>Women's Health</span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Cultural Teachings
-                                                    </span>
-                                                </li>
-                                                <li className="flex items-center space-x-2">
-                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-                                                    <span>
-                                                        Traditional Counselling
+                                                <li className="flex items-center space-x-3 text-black/70 group">
+                                                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-secondary/40 to-secondary/60 group-hover:scale-125 transition-transform"></span>
+                                                    <span className="group-hover:text-secondary/90 transition-colors">
+                                                        24/7 on-call support
+                                                        available
                                                     </span>
                                                 </li>
                                             </ul>
+                                            <p className="text-black/50 italic mt-4 text-sm border-t border-secondary/5 pt-4">
+                                                Postpartum visits are
+                                                approximately 1½ hours long
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                            </CardContent>
-                        </Card>
+                                </CardContent>
+                            </Card>
+                        </div>
                     </section>
 
-                    {/* Key Resources */}
+                    {/* Key Organizations & Resources */}
                     <section className="mb-16">
-                        <h2 className="heading-md text-center text-gradient mb-8">
-                            Key Organizations & Resources
-                        </h2>
+                        <div className="flex flex-col items-center mb-8">
+                            <div className="text-center max-w-2xl">
+                                <h2 className="heading-md text-gradient mb-4">
+                                    Key Organizations & Resources
+                                </h2>
+                                <p className="text-medium text-black/80 mb-6">
+                                    Connect with trusted organizations
+                                    supporting Indigenous maternal health
+                                </p>
+                            </div>
+                        </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 gap-8">
                             {resources.map((resource, index) => (
                                 <Card
                                     key={index}
-                                    className="bg-white/60 backdrop-blur-sm border-border/50 hover:shadow-lg transition-shadow"
+                                    className="bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group"
                                 >
                                     <CardHeader>
-                                        <CardTitle className="font-serif text-lg text-black">
+                                        <CardTitle className="font-serif text-xl text-primary/90 group-hover:text-primary transition-colors">
                                             {resource.title}
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-black text-body mb-4 italic">
+                                        <p className="text-black/70 text-body mb-6">
                                             {resource.description}
                                         </p>
-                                        <div className="space-y-2">
-                                            <div className="flex items-center text-black text-small">
-                                                <Phone className="h-4 w-4 mr-2" />
+                                        <div className="space-y-3">
+                                            <div className="flex items-center text-black/70 text-body group-hover:text-primary/90 transition-colors">
+                                                <Phone className="h-5 w-5 mr-3 text-primary/70" />
                                                 {resource.contact}
                                             </div>
                                             <Button
                                                 variant="outline"
-                                                size="sm"
+                                                size="default"
                                                 onClick={() =>
                                                     window.open(
                                                         resource.website,
                                                         '_blank'
                                                     )
                                                 }
-                                                className="w-full text-small"
+                                                className="w-full bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 text-primary font-medium transition-all duration-300 group"
                                             >
                                                 Visit Website
-                                                <ExternalLink className="ml-2 h-4 w-4" />
+                                                <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                             </Button>
                                         </div>
                                     </CardContent>
@@ -446,66 +368,6 @@ const Resources = () => {
                                                 </span>
                                             </li>
                                         </ul>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </section>
-
-                    {/* Emergency Information */}
-                    <section>
-                        <Card className="bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 border-primary/20 shadow-md">
-                            <CardHeader className="pb-2">
-                                <CardTitle className="text-2xl font-serif text-gradient text-center">
-                                    Emergency & Crisis Support
-                                </CardTitle>
-                                <p className="text-center text-black/60 text-medium mt-2">
-                                    24/7 Support when you need it most
-                                </p>
-                            </CardHeader>
-                            <CardContent className="pt-8">
-                                <div className="grid md:grid-cols-3 gap-8">
-                                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-md transition-all duration-300">
-                                        <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                                            <Phone className="h-6 w-6 text-primary/80" />
-                                        </div>
-                                        <h3 className="font-serif font-semibold text-black/80 text-lg mb-3">
-                                            24/7 Crisis Line
-                                        </h3>
-                                        <p className="text-black/70 text-body font-medium">
-                                            1-888-472-4367
-                                        </p>
-                                        <p className="text-black/60 text-small mt-2">
-                                            Available anytime, day or night
-                                        </p>
-                                    </div>
-                                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-md transition-all duration-300">
-                                        <div className="w-12 h-12 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
-                                            <Mail className="h-6 w-6 text-accent/80" />
-                                        </div>
-                                        <h3 className="font-serif font-semibold text-black/80 text-lg mb-3">
-                                            Patient Advocate
-                                        </h3>
-                                        <p className="text-black/70 text-body font-medium">
-                                            advocate@bqfn.ca
-                                        </p>
-                                        <p className="text-black/60 text-small mt-2">
-                                            We'll respond within 24 hours
-                                        </p>
-                                    </div>
-                                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-md transition-all duration-300">
-                                        <div className="w-12 h-12 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
-                                            <MapPin className="h-6 w-6 text-secondary/80" />
-                                        </div>
-                                        <h3 className="font-serif font-semibold text-black/80 text-lg mb-3">
-                                            Health Centre
-                                        </h3>
-                                        <p className="text-black/70 text-body font-medium">
-                                            Bay of Quinte First Nations
-                                        </p>
-                                        <p className="text-black/60 text-small mt-2">
-                                            Open Mon-Fri, 8am-5pm
-                                        </p>
                                     </div>
                                 </div>
                             </CardContent>

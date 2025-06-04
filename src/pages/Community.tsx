@@ -167,7 +167,7 @@ const Community = () => {
                                         />
                                         <Button
                                             type="submit"
-                                            className="w-full font-semibold text-small"
+                                            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
                                             disabled={
                                                 addMessageMutation.isPending
                                             }
