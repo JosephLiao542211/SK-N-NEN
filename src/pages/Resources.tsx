@@ -44,7 +44,7 @@ const Resources = () => {
         },
         {
             question: 'What if I experience discrimination in healthcare?',
-            answer: "Document the incident, speak with a patient advocate or ombudsman, and don't hesitate to change providers if needed. You can also contact Indigenous health organizations for support and guidance. Remember, you deserve respectful, culturally appropriate care.",
+            answer: "Document the incident, speak with a patient advocate or ombudsman, and don't hesitate to change providers if needed. You can also contact Indigenous health organizations for support and guidance. Remember, you deserve respectful care.",
         },
     ];
 
