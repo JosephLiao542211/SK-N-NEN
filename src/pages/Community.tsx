@@ -116,10 +116,10 @@ const Community = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-16">
-                        <h1 className="heading-lg text-gradient mb-6">
+                        <h1 className="heading-lg text-gradient pb-6 px-4">
                             Community Support
                         </h1>
-                        <p className="text-large text-black max-w-3xl mx-auto italic">
+                        <p className="text-[1.1em] text-black max-w-2xl mx-auto italic px-4">
                             Share experiences, ask questions, and connect with
                             other mothers in our community. All messages are
                             anonymous to create a safe space for open

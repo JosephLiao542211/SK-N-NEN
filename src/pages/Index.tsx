@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import { Button } from '@/components/ui/button';
@@ -6,140 +5,231 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Users, BookOpen, ExternalLink } from 'lucide-react';
 
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-purple-50 to-blue-50">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <h1 className="heading-xl text-gradient mb-6">
-              Skén:nen
-            </h1>
-            <p className="text-large text-black mb-6 font-medium italic">
-              Balance and Peace in Motherhood
-            </p>
-            <p className="text-body text-black max-w-3xl mx-auto leading-relaxed">
-              A sacred space for Mohawk mothers of the Bay of Quinte First Nations. 
-              Here you'll find resources, support, and community to help you advocate 
-              for yourself during pregnancy and connect with traditional and modern midwife care.
-            </p>
-          </div>
-          
-          {/* Survey CTA */}
-          <div className="mb-12">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-base font-semibold rounded-full"
-              onClick={() => window.open('https://forms.google.com/your-survey-link', '_blank')}
-            >
-              Share Your Experience - Take Our Survey
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </Button>
-            <p className="text-small text-gray-600 mt-3 italic">
-              Your voice matters. Help us understand the needs of our community.
-            </p>
-          </div>
-        </div>
-      </section>
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-[#fff5eb] via-[#fdf1f5] to-[#f0f7ff]">
+            <Navigation />
 
-      {/* Abstract organic shapes */}
-      <div className="relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-purple-200/30 organic-shape"></div>
-        <div className="absolute top-20 right-0 w-48 h-48 bg-blue-200/30 organic-shape"></div>
-        <div className="absolute bottom-0 left-1/3 w-56 h-56 bg-orange-200/30 organic-shape"></div>
-      </div>
+            {/* Hero Section */}
+            <section className="container mx-auto px-4 py-16 relative">
+                <div className="max-w-4xl mx-auto text-center">
+                    <div className="mb-12">
+                        <h1 className="heading-xl text-gradient mb-4">
+                            Skén:nen
+                        </h1>
+                        <p className="text-large text-black/80 mb-8 font-medium">
+                            Balance and Peace in Motherhood
+                        </p>
 
-      {/* Stats Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="heading-md text-center text-gradient mb-12">
-            Our Community Impact
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-6 bg-white/60 backdrop-blur-sm border-border/50">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                  <Heart className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-4xl font-bold text-black mb-2">150+</h3>
-                <p className="text-body text-black">Mothers supported through pregnancy</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center p-6 bg-white/60 backdrop-blur-sm border-border/50">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Users className="h-8 w-8 text-secondary" />
-                </div>
-                <h3 className="text-4xl font-bold text-black mb-2">12</h3>
-                <p className="text-body text-black">Certified midwives in our network</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center p-6 bg-white/60 backdrop-blur-sm border-border/50">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
-                  <BookOpen className="h-8 w-8 text-accent" />
-                </div>
-                <h3 className="text-4xl font-bold text-black mb-2">50+</h3>
-                <p className="text-body text-black">Educational resources available</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+                        <p className="text-medium text-black/80 max-w-3xl mx-auto">
+                            A sacred space for Mohawk mothers of the Bay of
+                            Quinte First Nations. Here you'll find resources,
+                            support, and community to help you advocate for
+                            yourself during pregnancy and connect with
+                            traditional and modern midwife care in Kingston,
+                            Ontario.
+                        </p>
+                    </div>
 
-      {/* Quick Resources */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="heading-md text-center text-gradient mb-12">
-            Quick Access Resources
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6 bg-white/60 backdrop-blur-sm border-border/50 hover:shadow-lg transition-shadow">
-              <CardContent className="pt-0">
-                <h3 className="heading-sm text-gradient mb-4">Emergency Contacts</h3>
-                <div className="space-y-3 text-black">
-                  <p className="text-body"><span className="font-semibold text-base">24/7 Midwife Hotline:</span> 1-800-MIDWIFE</p>
-                  <p className="text-body"><span className="font-semibold text-base">Bay of Quinte Health Services:</span> (613) 969-7400</p>
-                  <p className="text-body"><span className="font-semibold text-base">Indigenous Health Line:</span> 1-888-472-4367</p>
+                    {/* Survey CTA */}
+                    <div className="mb-16">
+                        <Button
+                            size="lg"
+                            className="bg-primary/90 hover:bg-primary text-white px-8 py-4 text-base font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                            onClick={() =>
+                                window.open(
+                                    'https://forms.gle/shKoo6pzh4BTMErF9',
+                                    '_blank'
+                                )
+                            }
+                        >
+                            Share Your Experience - Take Our Survey
+                            <ExternalLink className="ml-2 h-5 w-5" />
+                        </Button>
+                        <p className="text-small text-black/60 mt-3">
+                            Your voice matters in shaping the future of our
+                            community
+                        </p>
+                    </div>
                 </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 bg-white/60 backdrop-blur-sm border-border/50 hover:shadow-lg transition-shadow">
-              <CardContent className="pt-0">
-                <h3 className="heading-sm text-gradient mb-4">Support Groups</h3>
-                <div className="space-y-3 text-black">
-                  <p className="text-body"><span className="font-semibold text-base">Weekly Circle:</span> <span className="italic">Thursdays 7pm at Community Centre</span></p>
-                  <p className="text-body"><span className="font-semibold text-base">New Mom Support:</span> <span className="italic">Tuesdays 10am via Zoom</span></p>
-                  <p className="text-body"><span className="font-semibold text-base">Traditional Teachings:</span> <span className="italic">First Saturday of each month</span></p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      {/* Footer */}
-      <footer className="bg-white/80 backdrop-blur-sm border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center">
-            <p className="text-body text-gray-700 mb-2">
-              © 2024 Skén:nen - Bay of Quinte First Nations Maternal Health Hub
-            </p>
-            <p className="text-small text-gray-600 italic">
-              Honoring traditional knowledge while embracing modern healthcare
-            </p>
-          </div>
+            {/* Stats Section */}
+            <section className="container mx-auto px-4 py-16 relative">
+                <div className="max-w-5xl mx-auto">
+                    <h2 className="heading-md text-center text-gradient mb-12">
+                        Our Community Impact
+                    </h2>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <Card className="card-hover text-center p-6 bg-white/80 backdrop-blur-sm border-border/50">
+                            <CardContent className="pt-6">
+                                <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <Heart className="h-8 w-8 text-primary/80" />
+                                </div>
+                                <h3 className="text-4xl font-bold text-black/80 mb-2">
+                                    150+
+                                </h3>
+                                <p className="text-body text-black/70">
+                                    Mothers supported through pregnancy
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="card-hover text-center p-6 bg-white/80 backdrop-blur-sm border-border/50">
+                            <CardContent className="pt-6">
+                                <div className="w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
+                                    <Users className="h-8 w-8 text-secondary/80" />
+                                </div>
+                                <h3 className="text-4xl font-bold text-black/80 mb-2">
+                                    25+
+                                </h3>
+                                <p className="text-body text-black/70">
+                                    Traditional midwives in our network
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="card-hover text-center p-6 bg-white/80 backdrop-blur-sm border-border/50">
+                            <CardContent className="pt-6">
+                                <div className="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                                    <BookOpen className="h-8 w-8 text-accent/80" />
+                                </div>
+                                <h3 className="text-4xl font-bold text-black/80 mb-2">
+                                    100+
+                                </h3>
+                                <p className="text-body text-black/70">
+                                    Educational resources available
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+
+            {/* Featured Section */}
+            <section className="container mx-auto px-4 py-16 relative">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <img
+                                src="/Sarah-Anne-Gusdal-indigenous-milk-medicine-week.png"
+                                alt="Indigenous milk medicine practices"
+                                className="img-feature w-full"
+                            />
+                        </div>
+                        <div>
+                            <h2 className="heading-md text-gradient mb-6">
+                                Traditional Wisdom Meets Modern Care
+                            </h2>
+                            <p className="text-medium text-black/80 mb-6">
+                                We honor our ancestral knowledge while embracing
+                                contemporary healthcare practices, creating a
+                                holistic approach to maternal care that respects
+                                both tradition and modern medicine.
+                            </p>
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
+                                onClick={() =>
+                                    (window.location.href = '/resources')
+                                }
+                            >
+                                Explore Our Resources
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Community Section */}
+            <section className="container mx-auto px-4 py-16 relative">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="order-2 md:order-1">
+                            <h2 className="heading-md text-gradient mb-6">
+                                Join Our Growing Community
+                            </h2>
+                            <p className="text-medium text-black/80 mb-6">
+                                Connect with other mothers, share experiences,
+                                and find support in our welcoming community.
+                                Together, we create a stronger network of care
+                                and understanding.
+                            </p>
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
+                                onClick={() =>
+                                    (window.location.href = '/community')
+                                }
+                            >
+                                Connect With Us
+                            </Button>
+                        </div>
+                        <div className="order-1 md:order-2">
+                            <img
+                                src="/234222997-family-portrait-and-beach-picnic-outdoor-with-smile-travel-and-summer-vacation-in-park-holiday.png"
+                                alt="Happy indigenous family enjoying time together"
+                                className="img-feature w-full"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Emergency Contact Section */}
+            <section className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto">
+                    <Card className="bg-white/90 backdrop-blur-sm border-border/50 shadow-lg">
+                        <CardContent className="p-8">
+                            <h2 className="heading-sm text-center text-gradient mb-8">
+                                24/7 Support Available
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="text-center md:text-left">
+                                    <p className="text-body mb-4">
+                                        <span className="font-semibold text-base block mb-1 text-black/80">
+                                            24/7 Midwife Hotline
+                                        </span>
+                                        <span className="text-black/70">
+                                            1-800-MIDWIFE
+                                        </span>
+                                    </p>
+                                    <p className="text-body">
+                                        <span className="font-semibold text-base block mb-1 text-black/80">
+                                            Bay of Quinte Health Services
+                                        </span>
+                                        <span className="text-black/70">
+                                            (613) 969-7400
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className="text-center md:text-left">
+                                    <p className="text-body mb-4">
+                                        <span className="font-semibold text-base block mb-1 text-black/80">
+                                            Indigenous Health Line
+                                        </span>
+                                        <span className="text-black/70">
+                                            1-888-354-7336
+                                        </span>
+                                    </p>
+                                    <p className="text-body">
+                                        <span className="font-semibold text-base block mb-1 text-black/80">
+                                            Emergency Services
+                                        </span>
+                                        <span className="text-black/70">
+                                            911
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
         </div>
-      </footer>
-    </div>
-  );
+    );
 };
 
 export default Index;

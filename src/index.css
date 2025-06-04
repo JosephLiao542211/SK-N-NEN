@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -6,129 +5,172 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 40 30% 96%;
-    --foreground: 240 10% 15%;
+    :root {
+        /* Warmer background with a hint of peach */
+        --background: 30 30% 97%;
+        --foreground: 25 15% 25%;
 
-    --card: 40 25% 99%;
-    --card-foreground: 240 10% 15%;
+        /* Softer card colors */
+        --card: 30 25% 99%;
+        --card-foreground: 25 15% 25%;
 
-    --popover: 40 25% 99%;
-    --popover-foreground: 240 10% 15%;
+        --popover: 30 25% 99%;
+        --popover-foreground: 25 15% 25%;
 
-    --primary: 270 40% 55%;
-    --primary-foreground: 0 0% 100%;
+        /* Warmer purple for primary */
+        --primary: 280 35% 60%;
+        --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 60% 60%;
-    --secondary-foreground: 0 0% 100%;
+        /* Softer blue for secondary */
+        --secondary: 200 45% 65%;
+        --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 240 5% 45%;
+        /* Warmer muted tones */
+        --muted: 30 25% 94%;
+        --muted-foreground: 25 10% 45%;
 
-    --accent: 320 40% 75%;
-    --accent-foreground: 240 10% 15%;
+        /* Softer rose accent */
+        --accent: 350 35% 75%;
+        --accent-foreground: 25 15% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+        /* Gentler destructive red */
+        --destructive: 0 65% 65%;
+        --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
-    --ring: 270 40% 55%;
+        /* Warmer borders */
+        --border: 30 25% 88%;
+        --input: 30 25% 88%;
+        --ring: 280 35% 60%;
 
-    --radius: 0.75rem;
-  }
+        --radius: 1rem;
+    }
 
-  .dark {
-    --background: 240 15% 10%;
-    --foreground: 40 15% 95%;
+    .dark {
+        /* Warmer dark mode */
+        --background: 25 15% 12%;
+        --foreground: 30 15% 90%;
 
-    --card: 240 15% 12%;
-    --card-foreground: 40 15% 95%;
+        --card: 25 15% 15%;
+        --card-foreground: 30 15% 90%;
 
-    --popover: 240 15% 12%;
-    --popover-foreground: 40 15% 95%;
+        --popover: 25 15% 15%;
+        --popover-foreground: 30 15% 90%;
 
-    --primary: 270 40% 55%;
-    --primary-foreground: 0 0% 98%;
+        /* Softer primary in dark mode */
+        --primary: 280 30% 65%;
+        --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 60% 40%;
-    --secondary-foreground: 0 0% 98%;
+        /* Gentler secondary in dark mode */
+        --secondary: 200 40% 45%;
+        --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 10% 20%;
-    --muted-foreground: 40 10% 65%;
+        /* Warmer muted tones */
+        --muted: 25 10% 25%;
+        --muted-foreground: 30 10% 70%;
 
-    --accent: 320 40% 30%;
-    --accent-foreground: 40 15% 95%;
+        /* Softer accent in dark mode */
+        --accent: 350 30% 35%;
+        --accent-foreground: 30 15% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+        --destructive: 0 50% 35%;
+        --destructive-foreground: 210 40% 98%;
 
-    --border: 240 15% 20%;
-    --input: 240 15% 20%;
-    --ring: 270 40% 55%;
-  }
+        --border: 25 15% 25%;
+        --input: 25 15% 25%;
+        --ring: 280 30% 65%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+    * {
+        @apply border-border;
+    }
 
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-serif tracking-tight;
+    }
 }
 
 @layer components {
-  .organic-shape {
-    clip-path: polygon(0% 20%, 20% 0%, 80% 5%, 100% 25%, 95% 70%, 75% 100%, 25% 95%, 5% 75%);
-  }
-  
-  .soft-gradient {
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
-  }
+    .organic-shape {
+        clip-path: polygon(
+            0% 20%,
+            20% 0%,
+            80% 5%,
+            100% 25%,
+            95% 70%,
+            75% 100%,
+            25% 95%,
+            5% 75%
+        );
+    }
 
-  .highlight-text {
-    @apply font-medium;
-  }
+    .soft-gradient {
+        background: linear-gradient(
+            135deg,
+            hsl(var(--background)) 0%,
+            hsl(var(--muted)) 100%
+        );
+    }
 
-  .heading-xl {
-    @apply font-serif text-5xl md:text-7xl font-bold;
-  }
+    /* Typography System */
+    .heading-xl {
+        @apply font-serif text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight;
+    }
 
-  .heading-lg {
-    @apply font-serif text-4xl md:text-6xl font-bold;
-  }
+    .heading-lg {
+        @apply font-serif text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight;
+    }
 
-  .heading-md {
-    @apply font-serif text-3xl md:text-4xl font-bold;
-  }
+    .heading-md {
+        @apply font-serif text-3xl md:text-4xl font-bold leading-[1.2] tracking-tight;
+    }
 
-  .heading-sm {
-    @apply font-serif text-2xl md:text-3xl font-semibold;
-  }
+    .heading-sm {
+        @apply font-serif text-2xl md:text-3xl font-semibold leading-[1.2] tracking-tight;
+    }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
-  }
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
+    }
 
-  .text-large {
-    @apply text-lg md:text-xl;
-  }
+    /* Text Sizes with Better Line Heights */
+    .text-large {
+        @apply text-lg md:text-xl leading-relaxed;
+    }
 
-  .text-medium {
-    @apply text-base md:text-lg;
-  }
+    .text-medium {
+        @apply text-base md:text-lg leading-relaxed;
+    }
 
-  .text-body {
-    @apply text-sm md:text-base;
-  }
+    .text-body {
+        @apply text-sm md:text-base leading-relaxed;
+    }
 
-  .text-small {
-    @apply text-xs md:text-sm;
-  }
+    .text-small {
+        @apply text-xs md:text-sm leading-relaxed;
+    }
+
+    /* Image Styles */
+    .img-feature {
+        @apply rounded-2xl shadow-xl shadow-primary/5;
+    }
+
+    .img-profile {
+        @apply rounded-full shadow-lg shadow-primary/5;
+    }
+
+    /* Card Styles */
+    .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:shadow-primary/5;
+    }
 }
