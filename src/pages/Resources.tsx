@@ -46,7 +46,7 @@ const Resources = () => {
 
     const resources = [
         {
-            title: 'Association of Ontario Midwivess',
+            title: 'Association of Ontario Midwives',
             description: 'Find certified midwives in your area',
             contact: '1-866-418-3773',
             website: 'https://www.ontariomidwives.ca/',
