@@ -52,10 +52,10 @@ const Resources = () => {
             website: 'https://www.ontariomidwives.ca/',
         },
         {
-            title: 'Indigenous Wellness Research Institute',
-            description: 'Research and resources on Indigenous maternal health',
-            contact: 'info@iwri.org',
-            website: 'https://iwri.org/',
+            title: 'National Collaborating Centre for Indigenous Health',
+            description: 'Supports for maternal health focusing on well being of Indigenous women.',
+            contact: '250-960-5250',
+            website: 'https://www.nccih.ca/en/',
         },
         {
             title: "Native Women's Association of Canada",
@@ -64,10 +64,10 @@ const Resources = () => {
             website: 'https://www.nwac.ca/',
         },
         {
-            title: 'Birthing on Country Programs',
-            description: 'Traditional birthing practices and modern care',
-            contact: 'Contact your local Indigenous health centre',
-            website: 'Various locations',
+            title: 'Kingston Interval House',
+            description: 'Community counseling support for Indigenous Families',
+            contact: '613-546-1777 (crisis line)',
+            website: 'https://kingstonintervalhouse.com/',
         },
     ];
 
