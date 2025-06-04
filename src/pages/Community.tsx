@@ -4,7 +4,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { Heart, MessageCircle, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import {
+    Heart,
+    MessageCircle,
+    Phone,
+    Mail,
+    MapPin,
+    Clock,
+    ExternalLink,
+} from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { format, formatDistanceToNow } from 'date-fns';
@@ -224,136 +232,96 @@ const Community = () => {
 
                         {/* Sidebar with Contacts */}
                         <div className="space-y-6">
-                            {/* Midwife Contacts */}
-                            <Card className="bg-white/60 backdrop-blur-sm border-border/50">
+                            {/* Contact Information */}
+                            <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:shadow-md transition-all duration-300">
                                 <CardHeader>
-                                    <CardTitle className="text-lg font-serif text-gradient">
-                                        Midwife & Healthcare Contacts
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent className="space-y-6">
-                                    {midwifeContacts.map((contact, index) => (
-                                        <div
-                                            key={index}
-                                            className="border-b border-border/50 last:border-b-0 pb-4 last:pb-0"
-                                        >
-                                            <h3 className="font-serif font-semibold text-black text-base mb-2">
-                                                {contact.name}
-                                            </h3>
-                                            <p className="text-black text-small mb-3 italic">
-                                                {contact.specialization}
-                                            </p>
-
-                                            <div className="space-y-2">
-                                                <div className="flex items-center text-black text-xs">
-                                                    <Phone className="h-4 w-4 mr-2 text-primary" />
-                                                    {contact.phone}
-                                                </div>
-                                                <div className="flex items-center text-black text-xs">
-                                                    <Mail className="h-4 w-4 mr-2 text-primary" />
-                                                    {contact.email}
-                                                </div>
-                                                <div className="flex items-center text-gray-600 text-xs">
-                                                    <Clock className="h-4 w-4 mr-2 text-primary" />
-                                                    {contact.availability}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </CardContent>
-                            </Card>
-
-                            {/* Support Groups */}
-                            <Card className="bg-white/60 backdrop-blur-sm border-border/50">
-                                <CardHeader>
-                                    <CardTitle className="text-lg font-serif text-gradient">
-                                        Support Groups & Events
+                                    <CardTitle className="text-xl font-serif text-primary/80">
+                                        Contact Information
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
-                                    <div>
-                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
-                                            Weekly Mother's Circle
+                                    <div className="space-y-2">
+                                        <h3 className="font-medium text-black/80">
+                                            Kenhtè:ke Midwives
                                         </h3>
-                                        <p className="text-black text-small mb-1">
-                                            Thursdays 7:00 PM
+                                        <div className="text-sm space-y-1 text-black/70">
+                                            <p className="flex items-center">
+                                                <MapPin className="h-4 w-4 mr-2 text-primary/60" />
+                                                1979 York Road, Tyendinaga
+                                                Mohawk Territory, ON K0K 1X0
+                                            </p>
+                                            <p className="flex items-center">
+                                                <Phone className="h-4 w-4 mr-2 text-primary/60" />
+                                                (613) 396-2223
+                                            </p>
+                                            <p className="flex items-center">
+                                                <Mail className="h-4 w-4 mr-2 text-primary/60" />
+                                                shekon@kenhtekemidwives.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="pt-2 text-sm text-black/60">
+                                        <p className="font-medium">
+                                            Hours of Operation:
                                         </p>
-                                        <p className="text-gray-600 text-xs italic">
-                                            Community Centre, Room A
+                                        <p>Monday-Friday: 8:30am-4:30pm</p>
+                                        <p>Saturday & Sunday: Closed</p>
+                                        <p className="mt-2 italic">
+                                            24/7 on-call support for active
+                                            clients
                                         </p>
                                     </div>
+                                </CardContent>
+                            </Card>
 
-                                    <div>
-                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
-                                            New Mom Support Group
-                                        </h3>
-                                        <p className="text-black text-small mb-1">
-                                            Tuesdays 10:00 AM
-                                        </p>
-                                        <p className="text-gray-600 text-xs italic">
-                                            Virtual via Zoom
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
-                                            Traditional Teachings
-                                        </h3>
-                                        <p className="text-black text-small mb-1">
-                                            First Saturday of each month
-                                        </p>
-                                        <p className="text-gray-600 text-xs italic">
-                                            Elder's Lodge, 2:00 PM
-                                        </p>
-                                    </div>
+                            {/* Quick Links */}
+                            <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:shadow-md transition-all duration-300">
+                                <CardHeader>
+                                    <CardTitle className="text-xl font-serif text-primary/80">
+                                        Important Resources
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <ul className="space-y-3 text-sm">
+                                        <li>
+                                            <a
+                                                href="https://www.ontariomidwives.ca/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center text-black/70 hover:text-primary/80 transition-colors"
+                                            >
+                                                <ExternalLink className="h-4 w-4 mr-2 text-primary/60" />
+                                                Association of Ontario Midwives
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.health.gov.on.ca/en/public/programs/midwife/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center text-black/70 hover:text-primary/80 transition-colors"
+                                            >
+                                                <ExternalLink className="h-4 w-4 mr-2 text-primary/60" />
+                                                Ontario Midwifery Program
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.bqfnhc.com/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center text-black/70 hover:text-primary/80 transition-colors"
+                                            >
+                                                <ExternalLink className="h-4 w-4 mr-2 text-primary/60" />
+                                                Bay of Quinte First Nations
+                                                Health Centre
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </CardContent>
                             </Card>
 
                             {/* Emergency Contacts */}
-                            <Card className="bg-primary/10 border-primary/20">
-                                <CardHeader>
-                                    <CardTitle className="text-lg font-serif text-gradient">
-                                        Emergency Contacts
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent className="space-y-3">
-                                    <div className="flex items-center">
-                                        <Phone className="h-5 w-5 mr-3 text-primary" />
-                                        <div>
-                                            <p className="font-serif font-semibold text-black text-small">
-                                                24/7 Midwife Hotline
-                                            </p>
-                                            <p className="text-black text-xs">
-                                                1-800-MIDWIFE
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-center">
-                                        <MapPin className="h-5 w-5 mr-3 text-primary" />
-                                        <div>
-                                            <p className="font-serif font-semibold text-black text-small">
-                                                Bay of Quinte Health Services
-                                            </p>
-                                            <p className="text-black text-xs">
-                                                (613) 969-7400
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-center">
-                                        <Phone className="h-5 w-5 mr-3 text-primary" />
-                                        <div>
-                                            <p className="font-serif font-semibold text-black text-small">
-                                                Crisis Support
-                                            </p>
-                                            <p className="text-black text-xs italic">
-                                                1-888-472-4367
-                                            </p>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
                         </div>
                     </div>
                 </div>

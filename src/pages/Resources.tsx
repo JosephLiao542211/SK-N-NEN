@@ -42,10 +42,6 @@ const Resources = () => {
             question: 'Can I use traditional medicines during pregnancy?',
             answer: 'Always discuss traditional medicines with your healthcare provider. Many are safe and beneficial, but some may interact with modern medications or have contraindications during pregnancy. A culturally competent provider will work with you to safely incorporate traditional practices.',
         },
-        {
-            question: 'What if I experience discrimination in healthcare?',
-            answer: "Document the incident, speak with a patient advocate or ombudsman, and don't hesitate to change providers if needed. You can also contact Indigenous health organizations for support and guidance. Remember, you deserve respectful care.",
-        },
     ];
 
     const resources = [
@@ -119,6 +115,191 @@ const Resources = () => {
                                 </AccordionItem>
                             ))}
                         </Accordion>
+                    </section>
+                    {/* Kenhtè:ke Midwives Services Section */}
+                    <section className="mb-16">
+                        <div className="flex flex-col items-center mb-8">
+                            <h2 className="heading-md text-gradient mb-4">
+                                Kenhtè:ke Midwives Services
+                            </h2>
+                            <a
+                                href="https://www.kenhtekemidwives.com/services"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-full transition-all duration-300 group"
+                            >
+                                Visit Official Services Page
+                                <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                            </a>
+                        </div>
+                        <Card className="bg-white/40 backdrop-blur-sm border-primary/10 shadow-sm hover:shadow-md transition-all duration-300">
+                            <CardContent className="pt-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="space-y-3 p-4 bg-white/60 rounded-lg">
+                                        <h3 className="font-serif font-semibold text-primary/80 text-lg mb-3 border-b border-primary/20 pb-2">
+                                            Prenatal Care Schedule
+                                        </h3>
+                                        <ul className="space-y-2 text-black/70 text-sm">
+                                            <li className="flex items-center space-x-2">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                                                <span>
+                                                    Every 4 weeks until 28 weeks
+                                                </span>
+                                            </li>
+                                            <li className="flex items-center space-x-2">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                                                <span>
+                                                    Every 2 weeks from 28 – 36
+                                                    weeks
+                                                </span>
+                                            </li>
+                                            <li className="flex items-center space-x-2">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                                                <span>
+                                                    Every week after 36 weeks
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <p className="text-black/60 italic mt-3 text-xs">
+                                            Visits last approximately 1 hour and
+                                            can be done at the clinic or your
+                                            home
+                                        </p>
+                                    </div>
+                                    <div className="space-y-3 p-4 bg-white/60 rounded-lg">
+                                        <h3 className="font-serif font-semibold text-primary/80 text-lg mb-3 border-b border-primary/20 pb-2">
+                                            Postpartum Care Schedule
+                                        </h3>
+                                        <ul className="space-y-2 text-black/70 text-sm">
+                                            <li className="flex items-center space-x-2">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                                                <span>
+                                                    1, 3, 5 & 10 Day home visits
+                                                </span>
+                                            </li>
+                                            <li className="flex items-center space-x-2">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                                                <span>
+                                                    3 & 6 Week clinic visits
+                                                </span>
+                                            </li>
+                                            <li className="flex items-center space-x-2">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                                                <span>
+                                                    24/7 on-call support
+                                                    available
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <p className="text-black/60 italic mt-3 text-xs">
+                                            Postpartum visits are approximately
+                                            1½ hours long
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="mt-6 pt-6 border-t border-primary/10">
+                                    <h3 className="font-serif font-semibold text-primary/80 text-lg mb-4 text-center">
+                                        Additional Services
+                                    </h3>
+                                    <div className="grid md:grid-cols-3 gap-4 text-sm">
+                                        <div className="p-3 bg-white/40 rounded-lg">
+                                            <ul className="space-y-1.5">
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Complete Prenatal Care
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Labour & Birth Care
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>Postpartum Care</span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>Pap Tests</span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Pregnancy Testing
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="p-3 bg-white/40 rounded-lg">
+                                            <ul className="space-y-1.5">
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Traditional Medicine
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Traditional Parenting
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Family Teachings
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Nutrition Support
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>Well Baby Care</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="p-3 bg-white/40 rounded-lg">
+                                            <ul className="space-y-1.5">
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Breastfeeding Support
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Puberty Teachings
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>Women's Health</span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Cultural Teachings
+                                                    </span>
+                                                </li>
+                                                <li className="flex items-center space-x-2">
+                                                    <span className="w-1 h-1 rounded-full bg-primary/30"></span>
+                                                    <span>
+                                                        Traditional Counselling
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </section>
 
                     {/* Key Resources */}

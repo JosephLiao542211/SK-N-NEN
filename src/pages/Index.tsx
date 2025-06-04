@@ -149,6 +149,120 @@ const Index = () => {
                 </div>
             </section>
 
+            {/* Kenhtè:ke Midwives Services Section */}
+            <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <div className="max-w-6xl mx-auto">
+                    <div className="flex flex-col items-center mb-12">
+                        <h2 className="heading-md text-center text-gradient mb-4">
+                            Kenhtè:ke Midwives Services
+                        </h2>
+                        <a
+                            href="https://www.kenhtekemidwives.com/services"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-full transition-all duration-300 group"
+                        >
+                            Visit Official Services Page
+                            <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
+                            <CardContent className="p-6">
+                                <h3 className="text-xl font-serif font-semibold text-primary/80 mb-4 pb-2 border-b border-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                                    Prenatal Care
+                                </h3>
+                                <ul className="space-y-2 text-black/70">
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Regular check-ups throughout
+                                            pregnancy
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Traditional medicine and teachings
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Cultural and spiritual support
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Home or clinic visits available
+                                        </span>
+                                    </li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
+                            <CardContent className="p-6">
+                                <h3 className="text-xl font-serif font-semibold text-primary/80 mb-4 pb-2 border-b border-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                                    Birth Support
+                                </h3>
+                                <ul className="space-y-2 text-black/70">
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>24/7 on-call support</span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Home or hospital birth options
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Traditional birth ceremonies
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>Culturally safe care</span>
+                                    </li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-white/60 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300 group">
+                            <CardContent className="p-6">
+                                <h3 className="text-xl font-serif font-semibold text-primary/80 mb-4 pb-2 border-b border-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                                    Postpartum Care
+                                </h3>
+                                <ul className="space-y-2 text-black/70">
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>Regular home visits</span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>Breastfeeding support</span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>Newborn care guidance</span>
+                                    </li>
+                                    <li className="flex items-start space-x-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2"></span>
+                                        <span>
+                                            Traditional healing practices
+                                        </span>
+                                    </li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+
             {/* Community Section */}
             <section className="container mx-auto px-4 py-16 relative">
                 <div className="max-w-6xl mx-auto">
@@ -180,57 +294,6 @@ const Index = () => {
                             />
                         </div>
                     </div>
-                </div>
-            </section>
-
-            {/* Emergency Contact Section */}
-            <section className="container mx-auto px-4 py-16">
-                <div className="max-w-4xl mx-auto">
-                    <Card className="bg-white/90 backdrop-blur-sm border-border/50 shadow-lg">
-                        <CardContent className="p-8">
-                            <h2 className="heading-sm text-center text-gradient mb-8">
-                                24/7 Support Available
-                            </h2>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="text-center md:text-left">
-                                    <p className="text-body mb-4">
-                                        <span className="font-semibold text-base block mb-1 text-black/80">
-                                            24/7 Midwife Hotline
-                                        </span>
-                                        <span className="text-black/70">
-                                            1-800-MIDWIFE
-                                        </span>
-                                    </p>
-                                    <p className="text-body">
-                                        <span className="font-semibold text-base block mb-1 text-black/80">
-                                            Bay of Quinte Health Services
-                                        </span>
-                                        <span className="text-black/70">
-                                            (613) 969-7400
-                                        </span>
-                                    </p>
-                                </div>
-                                <div className="text-center md:text-left">
-                                    <p className="text-body mb-4">
-                                        <span className="font-semibold text-base block mb-1 text-black/80">
-                                            Indigenous Health Line
-                                        </span>
-                                        <span className="text-black/70">
-                                            1-888-354-7336
-                                        </span>
-                                    </p>
-                                    <p className="text-body">
-                                        <span className="font-semibold text-base block mb-1 text-black/80">
-                                            Emergency Services
-                                        </span>
-                                        <span className="text-black/70">
-                                            911
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </CardContent>
-                    </Card>
                 </div>
             </section>
         </div>
