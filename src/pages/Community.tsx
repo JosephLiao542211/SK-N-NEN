@@ -307,14 +307,13 @@ const Community = () => {
                                         </li>
                                         <li>
                                             <a
-                                                href="https://www.bqfnhc.com/"
+                                                href="https://kingstonintervalhouse.com/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex items-center text-black/70 hover:text-primary/80 transition-colors"
                                             >
                                                 <ExternalLink className="h-4 w-4 mr-2 text-primary/60" />
-                                                Bay of Quinte First Nations
-                                                Health Centre
+                                                Kingston Interval House
                                             </a>
                                         </li>
                                     </ul>
