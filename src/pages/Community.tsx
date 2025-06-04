@@ -1,0 +1,365 @@
+import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Badge } from '@/components/ui/badge';
+import { Heart, MessageCircle, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { format, formatDistanceToNow } from 'date-fns';
+import { useToast } from '@/components/ui/use-toast';
+
+const Community = () => {
+    const [message, setMessage] = useState('');
+    const { toast } = useToast();
+    const queryClient = useQueryClient();
+
+    // Fetch messages
+    const { data: messages = [], isLoading } = useQuery({
+        queryKey: ['messages'],
+        queryFn: async () => {
+            const { data, error } = await supabase
+                .from('messages')
+                .select('*')
+                .order('created_at', { ascending: false });
+
+            if (error) {
+                toast({
+                    title: 'Error fetching messages',
+                    description: error.message,
+                    variant: 'destructive',
+                });
+                return [];
+            }
+
+            return data;
+        },
+    });
+
+    // Add new message mutation
+    const addMessageMutation = useMutation({
+        mutationFn: async (newMessage: string) => {
+            const { data, error } = await supabase
+                .from('messages')
+                .insert([
+                    {
+                        content: newMessage,
+                        responses: 0,
+                    },
+                ])
+                .select()
+                .single();
+
+            if (error) throw error;
+            return data;
+        },
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ['messages'] });
+            setMessage('');
+            toast({
+                title: 'Message posted',
+                description: 'Your message has been shared with the community.',
+            });
+        },
+        onError: (error) => {
+            toast({
+                title: 'Error posting message',
+                description: error.message,
+                variant: 'destructive',
+            });
+        },
+    });
+
+    const handleSubmitMessage = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (message.trim()) {
+            addMessageMutation.mutate(message);
+        }
+    };
+
+    const formatTimestamp = (timestamp: string) => {
+        const date = new Date(timestamp);
+        const distance = formatDistanceToNow(date, { addSuffix: true });
+        return distance;
+    };
+
+    const midwifeContacts = [
+        {
+            name: 'Sarah Bearfoot, RM',
+            specialization: 'Traditional & Modern Practices',
+            phone: '(613) 396-3255',
+            email: 'sbearfoot@midwivesofquinte.ca',
+            availability: 'Mon-Fri 9am-5pm',
+        },
+        {
+            name: 'Dr. Maria Santos',
+            specialization: 'Indigenous Maternal Health',
+            phone: '(613) 969-7400 ext. 2156',
+            email: 'msantos@bqhs.ca',
+            availability: 'Tue-Thu 8am-4pm',
+        },
+        {
+            name: 'Jennifer Hill, RN',
+            specialization: 'Prenatal Education & Support',
+            phone: '(613) 396-3271',
+            email: 'jhill@bqfn.ca',
+            availability: 'Mon-Wed-Fri 10am-6pm',
+        },
+    ];
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-purple-50 to-blue-50">
+            <Navigation />
+
+            <div className="container mx-auto px-4 py-16">
+                <div className="max-w-6xl mx-auto">
+                    {/* Header */}
+                    <div className="text-center mb-16">
+                        <h1 className="heading-lg text-gradient mb-6">
+                            Community Support
+                        </h1>
+                        <p className="text-large text-black max-w-3xl mx-auto italic">
+                            Share experiences, ask questions, and connect with
+                            other mothers in our community. All messages are
+                            anonymous to create a safe space for open
+                            discussion.
+                        </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        {/* Message Board */}
+                        <div className="lg:col-span-2">
+                            <Card className="bg-white/60 backdrop-blur-sm border-border/50 mb-6">
+                                <CardHeader>
+                                    <CardTitle className="text-xl font-serif text-gradient flex items-center">
+                                        <MessageCircle className="mr-2 h-6 w-6" />
+                                        Community Message Board
+                                    </CardTitle>
+                                    <p className="text-gray-600 text-body italic">
+                                        Share your thoughts, questions, or
+                                        experiences anonymously
+                                    </p>
+                                </CardHeader>
+                                <CardContent>
+                                    <form
+                                        onSubmit={handleSubmitMessage}
+                                        className="mb-6"
+                                    >
+                                        <Textarea
+                                            placeholder="Share your message with the community..."
+                                            value={message}
+                                            onChange={(e) =>
+                                                setMessage(e.target.value)
+                                            }
+                                            className="mb-4 min-h-[100px] text-body"
+                                            disabled={
+                                                addMessageMutation.isPending
+                                            }
+                                        />
+                                        <Button
+                                            type="submit"
+                                            className="w-full font-semibold text-small"
+                                            disabled={
+                                                addMessageMutation.isPending
+                                            }
+                                        >
+                                            {addMessageMutation.isPending
+                                                ? 'Posting...'
+                                                : 'Post Message'}
+                                        </Button>
+                                    </form>
+
+                                    <div className="space-y-4">
+                                        {isLoading ? (
+                                            <p className="text-center text-gray-600">
+                                                Loading messages...
+                                            </p>
+                                        ) : messages.length === 0 ? (
+                                            <p className="text-center text-gray-600">
+                                                No messages yet. Be the first to
+                                                share!
+                                            </p>
+                                        ) : (
+                                            messages.map((msg) => (
+                                                <Card
+                                                    key={msg.id}
+                                                    className="bg-white/40 border-border/30"
+                                                >
+                                                    <CardContent className="pt-4">
+                                                        <p className="text-black text-body mb-3 leading-relaxed">
+                                                            {msg.content}
+                                                        </p>
+                                                        <div className="flex items-center justify-between text-xs">
+                                                            <div className="flex items-center space-x-4 text-gray-600">
+                                                                <span className="flex items-center">
+                                                                    <Clock className="h-4 w-4 mr-1" />
+                                                                    {formatTimestamp(
+                                                                        msg.created_at
+                                                                    )}
+                                                                </span>
+                                                                <span className="flex items-center">
+                                                                    <Heart className="h-4 w-4 mr-1" />
+                                                                    {
+                                                                        msg.responses
+                                                                    }{' '}
+                                                                    responses
+                                                                </span>
+                                                            </div>
+                                                            <Badge
+                                                                variant="secondary"
+                                                                className="text-xs"
+                                                            >
+                                                                Anonymous
+                                                            </Badge>
+                                                        </div>
+                                                    </CardContent>
+                                                </Card>
+                                            ))
+                                        )}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+
+                        {/* Sidebar with Contacts */}
+                        <div className="space-y-6">
+                            {/* Midwife Contacts */}
+                            <Card className="bg-white/60 backdrop-blur-sm border-border/50">
+                                <CardHeader>
+                                    <CardTitle className="text-lg font-serif text-gradient">
+                                        Midwife & Healthcare Contacts
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-6">
+                                    {midwifeContacts.map((contact, index) => (
+                                        <div
+                                            key={index}
+                                            className="border-b border-border/50 last:border-b-0 pb-4 last:pb-0"
+                                        >
+                                            <h3 className="font-serif font-semibold text-black text-base mb-2">
+                                                {contact.name}
+                                            </h3>
+                                            <p className="text-black text-small mb-3 italic">
+                                                {contact.specialization}
+                                            </p>
+
+                                            <div className="space-y-2">
+                                                <div className="flex items-center text-black text-xs">
+                                                    <Phone className="h-4 w-4 mr-2 text-primary" />
+                                                    {contact.phone}
+                                                </div>
+                                                <div className="flex items-center text-black text-xs">
+                                                    <Mail className="h-4 w-4 mr-2 text-primary" />
+                                                    {contact.email}
+                                                </div>
+                                                <div className="flex items-center text-gray-600 text-xs">
+                                                    <Clock className="h-4 w-4 mr-2 text-primary" />
+                                                    {contact.availability}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </CardContent>
+                            </Card>
+
+                            {/* Support Groups */}
+                            <Card className="bg-white/60 backdrop-blur-sm border-border/50">
+                                <CardHeader>
+                                    <CardTitle className="text-lg font-serif text-gradient">
+                                        Support Groups & Events
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-4">
+                                    <div>
+                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
+                                            Weekly Mother's Circle
+                                        </h3>
+                                        <p className="text-black text-small mb-1">
+                                            Thursdays 7:00 PM
+                                        </p>
+                                        <p className="text-gray-600 text-xs italic">
+                                            Community Centre, Room A
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
+                                            New Mom Support Group
+                                        </h3>
+                                        <p className="text-black text-small mb-1">
+                                            Tuesdays 10:00 AM
+                                        </p>
+                                        <p className="text-gray-600 text-xs italic">
+                                            Virtual via Zoom
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="font-serif font-semibold text-black text-base mb-2">
+                                            Traditional Teachings
+                                        </h3>
+                                        <p className="text-black text-small mb-1">
+                                            First Saturday of each month
+                                        </p>
+                                        <p className="text-gray-600 text-xs italic">
+                                            Elder's Lodge, 2:00 PM
+                                        </p>
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            {/* Emergency Contacts */}
+                            <Card className="bg-primary/10 border-primary/20">
+                                <CardHeader>
+                                    <CardTitle className="text-lg font-serif text-gradient">
+                                        Emergency Contacts
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-3">
+                                    <div className="flex items-center">
+                                        <Phone className="h-5 w-5 mr-3 text-primary" />
+                                        <div>
+                                            <p className="font-serif font-semibold text-black text-small">
+                                                24/7 Midwife Hotline
+                                            </p>
+                                            <p className="text-black text-xs">
+                                                1-800-MIDWIFE
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center">
+                                        <MapPin className="h-5 w-5 mr-3 text-primary" />
+                                        <div>
+                                            <p className="font-serif font-semibold text-black text-small">
+                                                Bay of Quinte Health Services
+                                            </p>
+                                            <p className="text-black text-xs">
+                                                (613) 969-7400
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center">
+                                        <Phone className="h-5 w-5 mr-3 text-primary" />
+                                        <div>
+                                            <p className="font-serif font-semibold text-black text-small">
+                                                Crisis Support
+                                            </p>
+                                            <p className="text-black text-xs italic">
+                                                1-888-472-4367
+                                            </p>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Community;

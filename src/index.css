@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 96%;
+    --foreground: 240 10% 15%;
+
+    --card: 40 25% 99%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 40 25% 99%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 270 40% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 60% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 320 40% 75%;
+    --accent-foreground: 240 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 270 40% 55%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 15% 10%;
+    --foreground: 40 15% 95%;
+
+    --card: 240 15% 12%;
+    --card-foreground: 40 15% 95%;
+
+    --popover: 240 15% 12%;
+    --popover-foreground: 40 15% 95%;
+
+    --primary: 270 40% 55%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 60% 40%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 40 10% 65%;
+
+    --accent: 320 40% 30%;
+    --accent-foreground: 40 15% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 270 40% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .organic-shape {
+    clip-path: polygon(0% 20%, 20% 0%, 80% 5%, 100% 25%, 95% 70%, 75% 100%, 25% 95%, 5% 75%);
+  }
+  
+  .soft-gradient {
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  .highlight-text {
+    @apply font-medium;
+  }
+
+  .heading-xl {
+    @apply font-serif text-5xl md:text-7xl font-bold;
+  }
+
+  .heading-lg {
+    @apply font-serif text-4xl md:text-6xl font-bold;
+  }
+
+  .heading-md {
+    @apply font-serif text-3xl md:text-4xl font-bold;
+  }
+
+  .heading-sm {
+    @apply font-serif text-2xl md:text-3xl font-semibold;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .text-large {
+    @apply text-lg md:text-xl;
+  }
+
+  .text-medium {
+    @apply text-base md:text-lg;
+  }
+
+  .text-body {
+    @apply text-sm md:text-base;
+  }
+
+  .text-small {
+    @apply text-xs md:text-sm;
+  }
+}
