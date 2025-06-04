@@ -296,13 +296,13 @@ const Community = () => {
                                         </li>
                                         <li>
                                             <a
-                                                href="https://www.health.gov.on.ca/en/public/programs/midwife/"
+                                                href="https://www.ontario.ca/page/midwifery-ontario"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex items-center text-black/70 hover:text-primary/80 transition-colors"
                                             >
                                                 <ExternalLink className="h-4 w-4 mr-2 text-primary/60" />
-                                                Ontario Midwifery Program
+                                                Midwifery in Ontario
                                             </a>
                                         </li>
                                         <li>
