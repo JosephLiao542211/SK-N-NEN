@@ -57,20 +57,22 @@ const Index = () => {
             <section className="container mx-auto px-4 py-16 relative">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="heading-md text-center text-gradient mb-12">
-                        Our Community Impact
+                        Our Mission Goals
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         <Card className="card-hover text-center p-6 bg-white/80 backdrop-blur-sm border-border/50">
                             <CardContent className="pt-6">
                                 <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                                    <Heart className="h-8 w-8 text-primary/80" />
+                                    <BookOpen className="h-8 w-8 text-primary/80" />
                                 </div>
-                                <h3 className="text-4xl font-bold text-black/80 mb-2">
-                                    150+
+                                <h3 className="text-xl font-serif font-semibold text-black/80 mb-3">
+                                    Educational Resources
                                 </h3>
                                 <p className="text-body text-black/70">
-                                    Mothers supported through pregnancy
+                                    Providing access to culturally-informed
+                                    pregnancy and parenting resources throughout
+                                    Kingston and surrounding areas
                                 </p>
                             </CardContent>
                         </Card>
@@ -80,11 +82,13 @@ const Index = () => {
                                 <div className="w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
                                     <Users className="h-8 w-8 text-secondary/80" />
                                 </div>
-                                <h3 className="text-4xl font-bold text-black/80 mb-2">
-                                    25+
+                                <h3 className="text-xl font-serif font-semibold text-black/80 mb-3">
+                                    Traditional Midwifery
                                 </h3>
                                 <p className="text-body text-black/70">
-                                    Traditional midwives in our network
+                                    Connecting mothers with experienced
+                                    Indigenous midwives and knowledge keepers in
+                                    the Kingston community
                                 </p>
                             </CardContent>
                         </Card>
@@ -92,13 +96,15 @@ const Index = () => {
                         <Card className="card-hover text-center p-6 bg-white/80 backdrop-blur-sm border-border/50">
                             <CardContent className="pt-6">
                                 <div className="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
-                                    <BookOpen className="h-8 w-8 text-accent/80" />
+                                    <Heart className="h-8 w-8 text-accent/80" />
                                 </div>
-                                <h3 className="text-4xl font-bold text-black/80 mb-2">
-                                    100+
+                                <h3 className="text-xl font-serif font-semibold text-black/80 mb-3">
+                                    Safe Environment
                                 </h3>
                                 <p className="text-body text-black/70">
-                                    Educational resources available
+                                    Fostering a supportive, culturally safe
+                                    space for Indigenous mothers throughout
+                                    their pregnancy journey
                                 </p>
                             </CardContent>
                         </Card>
@@ -132,7 +138,7 @@ const Index = () => {
                                 size="lg"
                                 className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
                                 onClick={() =>
-                                    (window.location.href = `${process.env.FRONTEND_URL}/resources`)
+                                    (window.location.href = '/resources')
                                 }
                             >
                                 Explore Our Resources
@@ -161,7 +167,7 @@ const Index = () => {
                                 size="lg"
                                 className="rounded-full shadow-sm hover:shadow-md transition-all duration-300"
                                 onClick={() =>
-                                    (window.location.href = `${process.env.FRONTEND_URL}/community`)
+                                    (window.location.href = '/community')
                                 }
                             >
                                 Connect With Us
