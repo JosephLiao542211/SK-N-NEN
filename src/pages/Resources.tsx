@@ -53,7 +53,7 @@ const Resources = () => {
         },
         {
             title: 'National Collaborating Centre for Indigenous Health',
-            description: 'Supports for maternal health for Indigenous women.',
+            description: 'Supports for maternal health for Indigenous women',
             contact: '250-960-5250',
             website: 'https://www.nccih.ca/en/',
         },
