@@ -140,8 +140,8 @@ const Community = () => {
                         <div className="lg:col-span-2">
                             <Card className="bg-white/60 backdrop-blur-sm border-border/50 mb-6">
                                 <CardHeader>
-                                    <CardTitle className="text-xl font-serif text-gradient flex items-center">
-                                        <MessageCircle className="mr-0 h-6 w-6" />
+                                    <CardTitle className="text-xl font-serif text-gradient">
+                                        <MessageCircle className="mr-0 h-6 w-full" />
                                     Community Message Board
                                     </CardTitle>
                                     <p className="text-gray-600 text-body italic">
